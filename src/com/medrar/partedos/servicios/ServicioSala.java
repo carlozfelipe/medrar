@@ -16,7 +16,9 @@ public class ServicioSala {
         Random random = new Random();
         int col = random.ints(1,0,9).findFirst().getAsInt();
         int fil = random.ints(1,0,8).findFirst().getAsInt();
-        return FILA[fil]+COLUMNA[col];
+        String sillaSeleccionada = FILA[fil]+COLUMNA[col];
+        System.out.println("silla seleccionada por espectador con edad y dinero válidos: " + sillaSeleccionada);
+        return sillaSeleccionada;
     }
 
     public static void sentarEspectadores(List<Espectador> espectadores, Sala sala){
